@@ -1,4 +1,3 @@
-from select import select
 from django.http import HttpResponse
 from django.template import loader
 
@@ -15,3 +14,5 @@ def inicio(request):
 
     res = template.render(diccionario)
     return HttpResponse(res)
+
+    
