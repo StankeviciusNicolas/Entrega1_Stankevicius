@@ -1,21 +1,22 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
-
 from blog.models import Articulo, Autor, Seccion
 
 # Create your views here.
 
 
 def inicio(request):
-
-    template = loader.get_template("inicio.html")
-    articulos = Articulo.objects.all()
-    diccionario = {"articulo1":1}
-
-    res = template.render(diccionario)
-    return HttpResponse(res)
+    return render(request, "inicio.html")
 
 def bienvenida(request):
     return render(request, "bienvenida.html")
+
+def procesar_seccion(request):
+    if request.method != "POST":
+        return render(request, "agregar-seccion.html")
+    
+    seccion1 = Seccion(categoria=request.POST["categoria"], lugar=request.POST["lugar"])
+    seccion1.save()
+
+    return render(request, "inicio.html")
+
     
