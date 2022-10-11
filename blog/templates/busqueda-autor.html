@@ -10,7 +10,9 @@
 <ul>
 {% for autor in autores %}
 
-    <li>{{autor.nombre}} {{autor.apellido}} - {{autor.email}}</li>
+    <li>Nombre completo: {{autor.apellido}}, {{autor.nombre}}<br> 
+    E-mail: {{autor.email}}</li>
+    <br>
 
 {% endfor %}
 </ul>
