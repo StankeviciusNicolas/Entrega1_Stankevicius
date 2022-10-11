@@ -20,17 +20,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario - Agregar SECCION</title>
+    <title>Formulario - Agregar AUTOR</title>
     
 </head>
 <body>
 
     <br>
     <br>
-    <form action="/agregar-seccion/" method="POST">{% csrf_token %}
+    <form action="/agregar-autor/" method="POST">{% csrf_token %}
 
-        <p> Categoría: <input type="text" name="categoria" ></p>
-        <p> Lugar: <input type="text" name="lugar"></p>
+        <p> Nombre: <input type="text" name="nombre-autor" ></p>
+        <p> Apellido: <input type="text" name="apellido-autor"></p>
+        <p> E-mail: <input type="email" name="email-autor"></p>
 
         <input type="submit" value="Enviar">
     </form>

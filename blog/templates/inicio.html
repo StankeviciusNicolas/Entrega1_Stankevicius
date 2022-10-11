@@ -109,18 +109,39 @@
                 </div>
                 <!-- Side widgets-->
                 <div class="col-lg-4">
-                    <!-- Search widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Search</div>
-                        <div class="card-body">
-                            <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Search autor-->
+                    <h6>Buscar Autor</h6>
+                    <form action="/busqueda_autor/" method="GET">
+                        <input type="text" name="nombre" id="nombre">
+                        <input type="submit" value="Buscar">
+                    </form>
+                    <br>
+                    <br>
+                    <!-- Search articulo-->
+                    <h6>Buscar Artículo</h6>
+                    <form action="/busqueda_articulo/" method="GET">
+                        <input type="text" name="titulo" id="titulo">
+                        <input type="submit" value="Buscar">
+                    </form>
+                    <br>
+                    <br>
+
+                    <!-- Search seccion-->
+                    <h6>Buscar Sección</h6>
+                    <form action="/busqueda_seccion/" method="GET">
+                        <input type="text" name="categoria" id="categoria">
+                        <input type="submit" value="Buscar">
+                    </form>
+                    <br>
+                    <br>                    
+
+
+
+
+
+
                     <!-- Categories widget-->
-                    <!-- Agregar sección-->
+                    <!-- Agregar sección
                     <a href="/agregar-seccion/"> Agregar nueva sección</a>
                     <div class="card mb-4">
                         <div class="card-header">Secciones</div>
@@ -143,6 +164,7 @@
                             </div>
                         </div>
                     </div>
+                -->
                     <!-- Side widget-->
                     <div class="card mb-4">
                         <div class="card-header">Alumno</div>

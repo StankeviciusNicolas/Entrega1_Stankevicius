@@ -1,0 +1,20 @@
+{% extends "nav_up_dwn.html" %}
+
+{% block contenido1 %}
+
+<h4>Búsqueda: {{nombre}}</h4>
+
+
+{% if autores %}
+
+<ul>
+{% for autor in autores %}
+
+    <li>{{autor.nombre}} {{autor.apellido}} - {{autor.email}}</li>
+
+{% endfor %}
+</ul>
+
+{% endif %}
+
+{% endblock %}
