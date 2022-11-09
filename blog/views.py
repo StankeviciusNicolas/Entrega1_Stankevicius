@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from blog.models import Articulo, Autor, Seccion, Avatar
 from django.http import HttpResponse
-from django.views.generic import (CreateView,
+from django.views.generic import (
+    CreateView,
     ListView,
     DetailView,
     CreateView,
@@ -72,13 +73,14 @@ def agregar_articulo(request):
     contexto = {"formulario": miFormulario}
     return render(request, "agregar-articulo.html", contexto)
 
+
 from django.urls import reverse
+
 
 class ArticuloCreacion(LoginRequiredMixin, CreateView):
     model = Articulo
     success_url = "/blog/articulo/list"
     fields = ["titulo", "subtitulo", "fecha", "texto", "imagen"]
-
 
 
 class ArticuloDetalle(LoginRequiredMixin, DetailView):
