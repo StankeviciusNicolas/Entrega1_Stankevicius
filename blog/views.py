@@ -79,7 +79,7 @@ from django.urls import reverse
 
 class ArticuloCreacion(LoginRequiredMixin, CreateView):
     model = Articulo
-    success_url = "/blog/articulo/list"
+    success_url = "/articulo/list"
     fields = ["titulo", "subtitulo", "fecha", "texto", "imagen"]
 
 
@@ -90,14 +90,14 @@ class ArticuloDetalle(LoginRequiredMixin, DetailView):
 
 class ArticuloUpdateView(LoginRequiredMixin, UpdateView):
     model = Articulo
-    success_url = "articulo/list"
+    success_url = "/articulo/list"
     fields = ["titulo", "subtitulo", "fecha", "texto", "imagen"]
 
 
 class ArticuloDelete(LoginRequiredMixin, DeleteView):
 
     model = Articulo
-    success_url = "articulo/list"
+    success_url = "/articulo/list"
 
 
 class ArticuloList(LoginRequiredMixin, ListView):

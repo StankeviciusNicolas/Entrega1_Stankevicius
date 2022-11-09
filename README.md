@@ -1,7 +1,11 @@
-# Entrega intermedia del Proyecto Final - Coderhouse
+# Entrega Proyecto Final - Coderhouse
 
 Alumno: Stankevicius Nicolás
 DNI: 36.426.067
+
+Alumno: Martincevich Nazareno
+DNI: 32.185.751
+
 
 * LOGIN
 Url: /admin/
