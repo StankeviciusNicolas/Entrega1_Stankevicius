@@ -1,47 +1,26 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Articulo Formulario</title>
+</head>
 
 {% extends "nav_up_dwn.html" %}
-
 {% block contenido1 %}
-{% load static %}
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="" />
-<meta name="author" content="" />
-<title>Proyecto Final - Coderhouse </title>
-<!-- Favicon-->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="{% static 'index/css/styles.css' %}" rel="stylesheet" />
 
-<html lang="en">
+{% if formulario.errors %}
+<p style="color: red;"> Error: alguno de los datos ingresados es incorrecto, revisar</p> 
+{% endif %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario - Agregar ARTICULO</title>
-    
-</head>
-<body>
+<form action="" method="POST">{% csrf_token %}
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type="submit" value="Guardar">
+</form>
 
-    <br>
-    <br>
-    <form action="/agregar-articulo/" method="POST">{% csrf_token %}
-
-        <p> Titulo: <input type="text" name="titulo-art" ></p>
-        <p> Fecha (YYYY/MM/DD): <input type="date" name="fecha-art"></p>
-        <p> Texto: <input type="text" name="texto-art"></p>
-
-        <input type="submit" value="Enviar">
-    </form>
-    <br>
-</body> 
-
-
-
-
-
-</html>
 
 {% endblock %}
+</html>

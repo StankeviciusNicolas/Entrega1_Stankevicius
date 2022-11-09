@@ -1,0 +1,10 @@
+{% extends "nav_up_dwn.html" %}
+{% block contenido1 %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

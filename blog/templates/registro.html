@@ -1,0 +1,10 @@
+{% extends "nav_up_dwn.html" %}
+{% block contenido1 %}
+<br>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br><br>
+    <button type="submit" name="submit">Registrarse</button>
+</form>
+{% endblock %}

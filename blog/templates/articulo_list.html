@@ -1,0 +1,26 @@
+{% extends "nav_up_dwn.html" %}
+
+{% block contenido1 %}
+<h1>Articulos del Blog </h1>
+{% if object_list %}
+
+    <ul>
+        {% for articulo in object_list %}
+
+        <li>
+            <p>Nombre: {{ articulo.titulo }}</p>
+            <p>
+                <a href="{% url 'ArticuloDetail' articulo.id %}">Ver articulo</a>
+                <a href="{% url 'ArticuloUpdate' articulo.id %}">Editar</a>
+                <a href="{% url 'ArticuloDelete' articulo.id %}">Borrar</a>
+            </p>
+
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+<h3>No hay articulos aún!</h3>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "nav_up_dwn.html" %}
+{% block contenido1 %}
+<br>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <button type="submit" name="submit">Log in!</button>
+</form>
+<br>
+<p> Si no estás registrado, podes hacerlo desde aquí: <strong> <a href="/register/">Registrarse</a> </strong></p>
+
+{% endblock %}
